@@ -14,12 +14,12 @@ class CreateOrderDetailsTable extends Migration
     public function up()
     {
         Schema::create('order_details', function (Blueprint $table) {
-            $table->integer('orderId')->unsigned();
-            $table->foreign('orderId')->references('id')->on('orders');
-            $table->integer('productId')->unsigned();
-            $table->foreign('productId')->references('id')->on('products');
-            $table->integer('quantity');
-            $table->double('amount');
+            $table->integer('idBook')->unsigned();
+            $table->integer('authorid')->references('id')->on('orders');
+            $table->integer('title')->unsigned();
+            $table->integer('iSBN')->references('id')->on('products');
+            $table->date('pub_year');
+            $table->tinyInteger('available');
             $table->timestamps();
         });
     }

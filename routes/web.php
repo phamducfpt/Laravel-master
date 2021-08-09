@@ -58,3 +58,4 @@ Route::get('/EventTeamplate/event/create',[EventRequest::class, 'rules']);
 
 Route::get('/demo/validate/create',[DemoValidate::class, 'create']);
 Route::post('/demo/validate/store',[DemoValidate::class, 'store']);
+Route::get('/resources/views/event/events/createBook',[\App\Http\Controllers\BookController::])
